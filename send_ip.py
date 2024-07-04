@@ -10,8 +10,8 @@ class TelegramBot:
         self.url_base = f'https://api.telegram.org/bot{telegram_token}/'
 
     def responder(self, resposta, chat_id):
-        link_de_envio = f'{self.url_base}sendMessage?chat_id={chat_id}&text={resposta}'
-        requests.get(link_de_envio)
+        urn = f'{self.url_base}sendMessage?chat_id={chat_id}&text={resposta}'
+        requests.get(urn)
 
 def main():
     ip_file_path = os.getenv('IP_FILE_PATH')
